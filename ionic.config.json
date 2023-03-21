@@ -1,0 +1,8 @@
+{
+  "name": "Indicadores",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "2dc143f6"
+}
