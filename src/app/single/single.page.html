@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-uppercase">{{ind}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title class="ion-text-capitalize">{{title}}</ion-card-title>
+      <ion-card-subtitle>Gráfica de líneas temporal</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div #chartContainer class="chart-container" class="ion-margin-bottom">
+        <canvas #chartCanvas id="MyChart">{{ chart }}</canvas>
+      </div>
+      
+      <ion-list slot="start">
+        <ion-item>
+          <ion-select placeholder="Año" [(ngModel)]="year" (ngModelChange)="onDateChange()" color="dark">
+            <ion-select-option value="2023">2023</ion-select-option>
+            <ion-select-option value="2022">2022</ion-select-option>
+            <ion-select-option value="2021">2021</ion-select-option>
+            <ion-select-option value="2020">2020</ion-select-option>
+            <ion-select-option value="2019">2019</ion-select-option>
+            <ion-select-option value="2018">2018</ion-select-option>
+            <ion-select-option value="2017">2017</ion-select-option>
+            <ion-select-option value="2016">2016</ion-select-option>
+            <ion-select-option value="2015">2015</ion-select-option>
+            <ion-select-option value="2014">2014</ion-select-option>
+            <ion-select-option value="2013">2013</ion-select-option>
+            <ion-select-option value="2012">2012</ion-select-option>
+            <ion-select-option value="2011">2011</ion-select-option>
+            <ion-select-option value="2010">2010</ion-select-option>
+            <ion-select-option value="2009">2009</ion-select-option>
+            <ion-select-option value="2008">2008</ion-select-option>
+            <ion-select-option value="2007">2007</ion-select-option>
+            <ion-select-option value="2006">2006</ion-select-option>
+            <ion-select-option value="2005">2005</ion-select-option>
+            <ion-select-option value="2004">2004</ion-select-option>
+            <ion-select-option value="2004">2003</ion-select-option>
+            <ion-select-option value="2004">2002</ion-select-option>
+            <ion-select-option value="2004">2001</ion-select-option>
+            <ion-select-option value="2004">2000</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-list slot="end">
+        <ion-item>
+          <ion-select placeholder="Todos los meses" [(ngModel)]="month" (ngModelChange)="onDateChange()">
+            <ion-select-option value="0">Todos los meses</ion-select-option>
+            <ion-select-option value="01">Enero</ion-select-option>
+            <ion-select-option value="02">Febrero</ion-select-option>
+            <ion-select-option value="03">Marzo</ion-select-option>
+            <ion-select-option value="04">Abril</ion-select-option>
+            <ion-select-option value="05">Mayo</ion-select-option>
+            <ion-select-option value="06">Junio</ion-select-option>
+            <ion-select-option value="07">Julio</ion-select-option>
+            <ion-select-option value="08">Agosto</ion-select-option>
+            <ion-select-option value="09">Septiembre</ion-select-option>
+            <ion-select-option value="10">Octubre</ion-select-option>
+            <ion-select-option value="11">Noviembre</ion-select-option>
+            <ion-select-option value="12">Diciembre</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list [inset]="true" id="indicador-list">
+    
+    <ion-item color="medium">
+      <ion-label>Fecha</ion-label>
+      <ion-label>Valor</ion-label>
+      <ion-icon name="trending-up"></ion-icon>
+    </ion-item>
+    
+    <ion-item *ngFor="let item of data; let i = index" color="light">
+      <ion-label>{{ item.Fecha }}</ion-label>
+      <ion-label>{{ item.Valor }}</ion-label>
+      <ion-icon *ngIf="item.comparacion === 'mayor'" name="caret-up-outline" color="success"></ion-icon>
+      <ion-icon *ngIf="item.comparacion === 'menor'" name="caret-down-outline" color="danger"></ion-icon>
+      <ion-icon *ngIf="!item.comparacion" name="remove" color="success"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
