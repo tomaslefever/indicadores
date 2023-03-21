@@ -10,8 +10,8 @@ La aplicación cuenta con las siguientes funciones:
 ## Tecnologías utilizadas
 La aplicación ha sido desarrollada utilizando las siguientes tecnologías:
 
-**Angular:** para la creación de la aplicación.
-**Ionic:** para el desarrollo de la interfaz de usuario.
+> **Angular:** para la creación de la aplicación.
+> **Ionic:** para el desarrollo de la interfaz de usuario.
 **Graph.js:** para la creación de los gráficos.
 **API CMF Bancos .v3:** para la obtención de los datos de los indicadores económicos.
 
