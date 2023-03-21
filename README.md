@@ -10,17 +10,17 @@ La aplicación cuenta con las siguientes funciones:
 ## Tecnologías utilizadas
 La aplicación ha sido desarrollada utilizando las siguientes tecnologías:
 
-** Angular: ** para la creación de la aplicación.
-** Ionic: ** para el desarrollo de la interfaz de usuario.
-** Graph.js: ** para la creación de los gráficos.
-** API CMF Bancos .v3: ** para la obtención de los datos de los indicadores económicos.
+**Angular:** para la creación de la aplicación.
+**Ionic:** para el desarrollo de la interfaz de usuario.
+**Graph.js:** para la creación de los gráficos.
+**API CMF Bancos .v3:** para la obtención de los datos de los indicadores económicos.
 
 ## Instalación
 Para instalar la aplicación, sigue los siguientes pasos:
 
-** Clona este repositorio en tu máquina local: ** git clone https://github.com/tomaslefever/indicadores.git
-** Instala las dependencias: ** npm install
-** Inicia la aplicación: ** ionic serve
+**Clona este repositorio en tu máquina local:** git clone https://github.com/tomaslefever/indicadores.git
+**Instala las dependencias:** npm install
+**Inicia la aplicación:** ionic serve
 
 ## Contribuciones
 Si quieres contribuir al desarrollo de la aplicación, puedes hacerlo a través de pull requests en este repositorio.
