@@ -36,7 +36,7 @@ export class SinglePage implements OnInit {
       }
     });
 
-    this.month = this.fechaActual.getMonth()+1;
+    this.month = 0;
     this.ind = this.activatedRoute.snapshot.paramMap.get('ind');
     this.title = this.activatedRoute.snapshot.paramMap.get('ind');
     this.year = this.fechaActual.getFullYear();
