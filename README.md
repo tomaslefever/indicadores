@@ -1,11 +1,16 @@
 # Indicadores Económicos
 Esta aplicación te permite conocer información sobre diferentes indicadores económicos importantes, como el dólar, euro, IPC, UF y UTM. La información es obtenida a través de la API CMF Bancos .v3.
 
+## Demo
+Para ver un demo de la aplicación, visita:
+https://tomaslefever.github.io/indicadores/
+
 ## Funciones
 La aplicación cuenta con las siguientes funciones:
 
 - **Consulta de indicadores:** en la pantalla principal, se muestra un listado de los indicadores económicos disponibles. Al seleccionar uno, se muestra el detalle del indicador, incluyendo un gráfico hecho con Graph.js y un listado de los valores por día y mes.
 - **Filtrado por fecha:** en la pantalla de detalle del indicador, puedes filtrar los valores por año y mes.
+- **Temas Light/Dark:** se carga el tema por defecto del dispositivo.
 
 ## Tecnologías utilizadas
 La aplicación ha sido desarrollada utilizando las siguientes tecnologías:
